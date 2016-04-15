@@ -7,6 +7,6 @@ Gem::Specification.new do |s|
   s.authors     = ["littleqz"]
   s.email       = 'qizhi@sudotry.com'
   s.files       = Dir['lib/**/*.rb']
-  s.homepage    = 'http://rubygems.org/gems/simple_action'
+  s.homepage    = 'https://github.com/qizhihere/ruby-base-action'
   s.license     = 'MIT'
 end
