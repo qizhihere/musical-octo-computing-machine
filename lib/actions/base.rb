@@ -2,25 +2,23 @@ module Actions
   class Base
     attr_reader :data, :errors, :error_type, :params
 
-    def initialize(params)
+    def initialize(params = {})
+      @errors = []
       @params = params
-      @success = true
-      @errors = {}
     end
 
     def success?
-      @success
+      (@errors.nil? || @errors.empty?) && @error_type == nil
     end
 
-    def has_errors?
-      !@errors.empty?
+    def error?
+      !success?
     end
 
-    def error(errors = nil, type: nil, data: nil)
-      @errors = errors if errors
-      @error_type = type if type
-      @data = data if data
-      @success = false
+    def error(errors = [], type: :default, data: nil)
+      @errors = errors
+      @error_type = type
+      @data = data
     end
 
     def set_data(data)
