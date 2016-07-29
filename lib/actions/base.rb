@@ -15,6 +15,10 @@ module Actions
       !success?
     end
 
+    def fail?
+      error?
+    end
+
     def error(errors = [], type: :default, data: nil)
       @errors = errors
       @error_type = type
