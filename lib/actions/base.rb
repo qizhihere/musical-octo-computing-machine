@@ -1,6 +1,6 @@
 module Actions
   class Base
-    attr_reader :data, :errors, :error_type
+    attr_reader :data, :err
 
     def initialize(params = {})
       @errors = []
@@ -8,7 +8,7 @@ module Actions
     end
 
     def success?
-      (@errors.nil? || @errors.empty?) && @error_type == nil
+      @err != nil
     end
 
     def error?
@@ -19,9 +19,9 @@ module Actions
       error?
     end
 
-    def error(type, errors = [])
-      @error_type = type
-      @errors = errors
+    def error(erro, data = nil)
+      @err = erro
+      @data = data
     end
 
     def set(attr, val)
