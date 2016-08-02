@@ -30,7 +30,7 @@ module Actions
     end
 
     def get(attr)
-      @data && @attr[attr]
+      @data && @data[attr]
     end
 
     def run
