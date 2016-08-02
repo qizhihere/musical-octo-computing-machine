@@ -8,7 +8,7 @@ module Actions
     end
 
     def success?
-      @err != nil
+      @err == nil
     end
 
     def error?
