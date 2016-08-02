@@ -24,6 +24,10 @@ module Actions
       @data = data
     end
 
+    def set_data(val)
+      @data = val
+    end
+
     def set(attr, val)
       @data ||= {}
       @data[attr] = val
