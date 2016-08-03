@@ -1,6 +1,6 @@
 module Actions
   class Base
-    attr_reader :data, :err, :params
+    attr_accessor :data, :err, :params
 
     def initialize(params = {})
       @errors = []
