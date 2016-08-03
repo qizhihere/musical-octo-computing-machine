@@ -20,8 +20,8 @@ module Actions
     end
 
     def error(erro, data = nil)
-      @err = erro
       @data = data
+      @err = erro
     end
 
     def set_data(val)

@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'base_action'
-  s.version     = '3.0.4'
-  s.date        = '2016-08-02'
+  s.version     = '3.0.5'
+  s.date        = '2016-08-03'
   s.summary     = "Slimming your controllers!"
   s.description = "Simple base action class for slim controllers."
   s.authors     = ["littleqz"]
