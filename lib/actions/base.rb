@@ -15,6 +15,10 @@ module Actions
       !success?
     end
 
+    def err_msg
+      @err ? @err.to_s.split('_').join(' ') : ''
+    end
+
     def fail?
       error?
     end
